@@ -1,0 +1,14 @@
+name: ris-sionna-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - tensorflow=2.15
+  - numpy
+  - matplotlib
+  - scipy
+  - ipywidgets
+  - jupyterlab
+  - pip
+  - pip:
+      - sionna==0.19

@@ -1,0 +1,26 @@
+<!-- lab5_clean.xml  –  save in the same folder as FinalBaseMesh.obj -->
+<scene version="2.1.0">
+
+    <!-- 1) Visual surface for the OpenGL preview only -->
+    <bsdf type="diffuse" id="preview_gray">
+        <rgb name="reflectance" value="0.7, 0.7, 0.7"/>
+    </bsdf>
+
+    <!-- 2) Radio-material placeholder –
+             Sionna will replace this at runtime -->
+    <bsdf type="null" id="radio_placeholder"/>
+
+    <!-- 3) Your OBJ mesh -->
+    <shape type="obj" id="lab5_flipped">
+        <string name="filename" value="lab_sionna_019_test5_cleaned.obj"/>
+
+        <!-- Use the visual BSDF for preview -->
+        <ref name="bsdf" id="preview_gray"/>
+
+        <transform name="to_world">
+            <rotate x="1" angle="90"/>   <!-- tip mesh upright  -->
+            <scale  value="1.0"/>        <!-- leave size intact -->
+        </transform>
+    </shape>
+
+</scene>
